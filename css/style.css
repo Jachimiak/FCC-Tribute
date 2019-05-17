@@ -3,14 +3,16 @@ html {
 }
 
 body {
-  font-family: "Raleway", sans-serif;
   background-color: hsl(0, 0%, 80%);
   margin: 0px 0px 0px 0px;
 }
-
+#main {
+  font-family: "Raleway", sans-serif;
+}
 .hero {
   background: linear-gradient(rgba(9, 9, 121, 0.42), rgba(2, 0, 36, 0.27)),
-    rgba(0, 212, 255, 0.19) url("https://res.cloudinary.com/jachimiakpics/image/upload/v1557968885/6USnpTforweb_cpvfsc.jpg");
+    rgba(0, 212, 255, 0.19)
+      url("https://res.cloudinary.com/jachimiakpics/image/upload/v1557968885/6USnpTforweb_cpvfsc.jpg");
   background-repeat: no-repeat;
   background-position: center 10%;
   background-size: cover;
@@ -27,7 +29,7 @@ header {
     "caption caption2";
 }
 
-#title {
+#titlebox {
   font-size: 36pt;
   justify-self: center;
   align-self: center;
@@ -35,7 +37,7 @@ header {
   padding-left: 5%;
 }
 
-#title > h1 {
+#title {
   font-weight: 200;
   margin-bottom: 0px;
 }
@@ -66,20 +68,10 @@ header {
   }
 }
 
-#img-div {
-  grid-area: hero2;
-}
-
 #cairne-resize {
   width: 100%;
   height: 100%;
   object-fit: scale-down;
-}
-
-#img-caption {
-  grid-area: caption2;
-  justify-self: center;
-  font-size: 24pt;
 }
 
 main {
@@ -131,10 +123,52 @@ main > div.dropquote > div.quotes_byline > p {
 }
 
 .thunder_bluff {
-    background: linear-gradient(135deg, rgba(250,198,149,0.3) 0%,rgba(245,171,102,0.3) 47%,rgba(239,141,49,0.3) 100%),     url("https://res.cloudinary.com/jachimiakpics/image/upload/v1557923518/786505-thunder-bluff_xv2mvw.jpg");
-    background-repeat: no-repeat;
+  background: linear-gradient(
+      135deg,
+      rgba(250, 198, 149, 0.3) 0%,
+      rgba(245, 171, 102, 0.3) 47%,
+      rgba(239, 141, 49, 0.3) 100%
+    ),
+    url("https://res.cloudinary.com/jachimiakpics/image/upload/v1557923518/786505-thunder-bluff_xv2mvw.jpg");
+  background-repeat: no-repeat;
   background-position: center 70%;
   background-size: cover;
   padding-top: 500px;
- 
+}
+
+#main-grid-area {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+  grid-template-areas:
+    "timeline portrait"
+    "timeline portrait"
+    "extra-space quote";
+  margin: 0 10%;
+}
+
+#tribute-info {
+  grid-area: timeline;
+  background: red;
+}
+
+#img-div {
+  grid-area: portrait;
+  justify-self: center;
+  align-self: center;
+}
+
+#img-responsive {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+#img-caption {
+  grid-area: quote;
+  justify-self: center;
+  align-self: center;
+  font-size: 12pt;
+  text-align: center;
 }

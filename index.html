@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>FCC Tribute Page Base Code</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   
   
       <link rel="stylesheet" href="css/style.css">
@@ -14,16 +15,19 @@
 
 <body>
 
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-
-<body>
-  <header class="hero">
-    <div id="title">
-      <h1>Cairne Bloodhoof</h1>
+  <body id="main">
+  <!--Hero header with image of Cairne and his name -->
+  <header class="hero" title="Cairne Bloodhoof">
+    <div id="titlebox">
+      <h1 id="title">Cairne Bloodhoof</h1>
       <div class="line"></div>
     </div>
   </header>
+  <!--End Hero Header -->
+
+  <!--Begin Main Body -->
   <main>
+    <!--Minor quote box -->
     <div class="dropquote">
       <div class="quotes">
         <p>May the Wind Be At Your Back</p>
@@ -33,7 +37,29 @@
         <p>Shu'halo Saying</p>
       </div>
     </div>
-    <div class="thunder_bluff">
+    <!--Diver with image of Thunder Bluff-->
+    <div class="thunder_bluff" title="Thunder Bluff">
+    </div>
+    <div class="dropquote">
+      <div class="quotes">
+        <p>Walk with the Earthmother</p>
+        <div class="quote_line"></div>
+      </div>
+      <div class="quotes_byline">
+        <p>Shu'halo Saying</p>
+      </div>
+    </div>
+    <div id="main-grid-area">
+      <!-- Timeline of Cairne -->
+      <div id="tribute-info">
+
+      </div>
+      <!-- Image of Cairne -->
+      <div id="img-div">
+        <img id="img-responsive" src="https://res.cloudinary.com/jachimiakpics/image/upload/v1558062801/Cairne_Bloodhoof_TCG_web_u3rn6i.jpg" alt="Cairne Bloodhoof Looks Out Over the Plains">
+        <p id="img-caption">Cairne Bloodhoof was killed through the treachery of the Grimtotem!</p>
+      </div>
+
     </div>
   </main>
 </body>
