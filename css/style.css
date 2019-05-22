@@ -138,28 +138,68 @@ main > div.dropquote > div.quotes_byline > p {
 
 #main-grid-area {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-gap: 10px;
-  grid-template-areas:
-    "timeline portrait"
-    "timeline portrait"
-    "extra-space quote";
-  margin: 0 10%;
+  grid-auto-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 0.5em;
+  margin: 0 auto;
+  width: 66%;
 }
 
 #tribute-info {
-  grid-area: timeline;
-  background: red;
+  grid-column-end: span 2;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  #tribute-info {
+    grid-column-end: span 3;
+    padding-right: 10px;
+  }
+  #img-div {
+    grid-column-end: span 3;
+    justify-self: center;
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #tribute-info {
+    grid-column-end: span 3;
+    padding-right: 10px;
+  }
+  #img-div {
+    grid-column-end: span3;
+    justify-self: center;
+    align-self: center;
+  }
+}
+
+div#tribute-info p {
+  font-size: 14pt;
+}
+
+div > #tribute-info h2 {
+  font-size: 18pt;
+}
+
+#tribute-info2 {
+  grid-column-end: span 3;
+  padding-right: 10px;
+}
+
+div > #tribute-info2 p {
+  font-size: 14pt;
+}
+
+div > #tribute-info2 h2 {
+  font-size: 18pt;
 }
 
 #img-div {
-  grid-area: portrait;
   justify-self: center;
   align-self: center;
 }
 
-#img-responsive {
+#image {
   max-width: 100%;
   display: block;
   height: auto;
@@ -172,3 +212,12 @@ main > div.dropquote > div.quotes_byline > p {
   font-size: 12pt;
   text-align: center;
 }
+
+#tribute-link {
+  text-decoration: none;
+}
+
+#tribute-link:hover{
+  color: #8C1616;
+}
+
