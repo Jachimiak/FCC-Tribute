@@ -217,7 +217,19 @@ div > #tribute-info2 h2 {
   text-decoration: none;
 }
 
-#tribute-link:hover{
-  color: #8C1616;
+#tribute-link:hover {
+  color: #8c1616;
 }
 
+footer {
+  background-color: #222222;
+  height: 80px;
+  color: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer h4 {
+  margin: 0;
+}
